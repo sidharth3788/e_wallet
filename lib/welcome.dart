@@ -14,17 +14,42 @@ class WelcomePage extends StatelessWidget {
           ),
           Image.asset('assets/logo.png'),
           const SizedBox(
-            height: 225,
+            height: 100,
           ),
-          ElevatedButton(
-            onPressed: () {},
-            style: const ButtonStyle(),
-            child: const Text(
-              'START',
-              style: TextStyle(
-                  color: Color(0xFF041444),
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold),
+          const Text(
+            'Welcome to e - wallet,',
+            style: TextStyle(
+                color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),
+          ),
+          const Text(
+            'Lets get Started',
+            style: TextStyle(
+                color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(
+            height: 50,
+          ),
+          SizedBox(
+            height: 55,
+            width: 140,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/login');
+              },
+              style: ButtonStyle(
+                shape: WidgetStatePropertyAll(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                ),
+              ),
+              child: const Text(
+                'START',
+                style: TextStyle(
+                    color: Color(0xFF041444),
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
           )
         ],
