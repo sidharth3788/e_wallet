@@ -1,3 +1,4 @@
+import 'package:e_wallet/register.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -100,7 +101,12 @@ class LoginPage extends StatelessWidget {
                       height: 80,
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Register()));
+                      },
                       child: RichText(
                         text: TextSpan(
                             text: 'Dont have an Account? ',

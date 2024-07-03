@@ -1,4 +1,3 @@
-import 'package:e_wallet/login.dart';
 import 'package:e_wallet/welcome.dart';
 import 'package:flutter/material.dart';
 
@@ -19,9 +18,6 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const WelcomePage(),
-      routes: <String, WidgetBuilder>{
-        '/login': (BuildContext context) => const LoginPage(),
-      },
     );
   }
 }
