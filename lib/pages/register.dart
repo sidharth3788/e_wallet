@@ -37,8 +37,7 @@ class Register extends StatelessWidget {
                 ),
                 child: SingleChildScrollView(
                   child: Padding(
-                    padding: const EdgeInsets.all(
-                        40), // Add padding inside the container
+                    padding: const EdgeInsets.all(40),
                     child: Column(
                       children: [
                         const Row(
@@ -51,14 +50,14 @@ class Register extends StatelessWidget {
                                       Radius.circular(15),
                                     ),
                                   ),
-                                  labelText: 'First Name',
+                                  labelText: 'Name',
                                   labelStyle: TextStyle(color: Colors.grey),
                                 ),
                               ),
                             ),
                             SizedBox(
                               width: 16.0,
-                            ), // Add space between the text fields
+                            ),
                             Expanded(
                               child: TextField(
                                 decoration: InputDecoration(
@@ -76,7 +75,7 @@ class Register extends StatelessWidget {
                         ),
                         const SizedBox(
                           height: 16.0,
-                        ), // Add space between the row and the new text field
+                        ),
                         const TextField(
                           decoration: InputDecoration(
                             border: OutlineInputBorder(
@@ -91,7 +90,7 @@ class Register extends StatelessWidget {
                         ),
                         const SizedBox(
                           height: 16.0,
-                        ), // Add space between the row and the new text field
+                        ),
                         const TextField(
                           decoration: InputDecoration(
                             border: OutlineInputBorder(
