@@ -1,5 +1,5 @@
 import 'package:e_wallet/widgets/demo.dart';
-import 'package:e_wallet/pages/register2.dart';
+import 'package:e_wallet/pages/register.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {

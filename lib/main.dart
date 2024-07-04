@@ -1,6 +1,6 @@
 import 'package:e_wallet/pages/login.dart';
 import 'package:e_wallet/widgets/demo.dart';
-import 'package:e_wallet/pages/register2.dart';
+import 'package:e_wallet/pages/register.dart';
 import 'package:e_wallet/pages/welcome.dart';
 import 'package:flutter/material.dart';
 

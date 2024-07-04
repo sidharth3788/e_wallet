@@ -62,7 +62,7 @@ class Register extends StatelessWidget {
                                       Radius.circular(15),
                                     ),
                                   ),
-                                  labelText: 'Last Name',
+                                  labelText: 'Age',
                                   labelStyle: TextStyle(color: Colors.grey),
                                 ),
                               ),
@@ -130,6 +130,22 @@ class Register extends StatelessWidget {
                         ),
                         SizedBox(
                           height: 16,
+                        ),
+                        Row(
+                          children: [
+                            ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor: WidgetStatePropertyAll(
+                                  Color(0xFF041444),
+                                ),
+                              ),
+                              onPressed: null,
+                              child: Text(
+                                'Register',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
