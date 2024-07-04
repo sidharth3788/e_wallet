@@ -1,4 +1,4 @@
-import 'package:e_wallet/login.dart';
+import 'package:e_wallet/pages/login.dart';
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatelessWidget {

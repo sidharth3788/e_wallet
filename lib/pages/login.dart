@@ -1,4 +1,5 @@
-import 'package:e_wallet/register.dart';
+import 'package:e_wallet/widgets/register.dart';
+import 'package:e_wallet/pages/register2.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -89,7 +90,12 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Register2()));
+                      },
                       child: const Text(
                         'Forgot Password?',
                         style: TextStyle(
