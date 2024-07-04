@@ -11,14 +11,19 @@ class Register extends StatelessWidget {
         child: Column(
           children: [
             const Padding(
-              padding: EdgeInsets.all(32),
-              child: Text(
-                'Create your Account',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
+              padding: EdgeInsets.only(top: 32, bottom: 16, left: 40),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    'Create your Account',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
             ),
             Expanded(
@@ -30,13 +35,13 @@ class Register extends StatelessWidget {
                     topRight: Radius.circular(40),
                   ),
                 ),
-                child: const SingleChildScrollView(
+                child: SingleChildScrollView(
                   child: Padding(
-                    padding:
-                        EdgeInsets.all(40), // Add padding inside the container
+                    padding: const EdgeInsets.all(
+                        40), // Add padding inside the container
                     child: Column(
                       children: [
-                        Row(
+                        const Row(
                           children: [
                             Expanded(
                               child: TextField(
@@ -69,10 +74,10 @@ class Register extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 16.0,
                         ), // Add space between the row and the new text field
-                        TextField(
+                        const TextField(
                           decoration: InputDecoration(
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.all(
@@ -84,10 +89,10 @@ class Register extends StatelessWidget {
                             prefixText: '+91',
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 16.0,
                         ), // Add space between the row and the new text field
-                        TextField(
+                        const TextField(
                           decoration: InputDecoration(
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.all(
@@ -98,10 +103,10 @@ class Register extends StatelessWidget {
                             labelStyle: TextStyle(color: Colors.grey),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 16,
                         ),
-                        TextField(
+                        const TextField(
                           decoration: InputDecoration(
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.all(
@@ -113,10 +118,10 @@ class Register extends StatelessWidget {
                           ),
                           obscureText: true,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 16,
                         ),
-                        TextField(
+                        const TextField(
                           decoration: InputDecoration(
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.all(
@@ -128,10 +133,11 @@ class Register extends StatelessWidget {
                           ),
                           obscureText: true,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 16,
                         ),
-                        Row(
+                        const Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             ElevatedButton(
                               style: ButtonStyle(
@@ -147,6 +153,27 @@ class Register extends StatelessWidget {
                             ),
                           ],
                         ),
+                        const SizedBox(
+                          height: 200,
+                        ),
+                        TextButton(
+                          onPressed: null,
+                          child: RichText(
+                            text: TextSpan(
+                                text: 'Already have an Account? ',
+                                style: TextStyle(
+                                    color: Colors.grey[600],
+                                    fontWeight: FontWeight.bold),
+                                children: const <TextSpan>[
+                                  TextSpan(
+                                    text: 'Sign in',
+                                    style: TextStyle(
+                                        color: Color(0xFF041444),
+                                        fontWeight: FontWeight.bold),
+                                  )
+                                ]),
+                          ),
+                        )
                       ],
                     ),
                   ),
