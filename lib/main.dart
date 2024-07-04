@@ -1,4 +1,3 @@
-import 'package:e_wallet/pages/register.dart';
 import 'package:e_wallet/pages/welcome.dart';
 import 'package:flutter/material.dart';
 
