@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class Register extends StatefulWidget {
-  const Register({super.key});
+class Demo extends StatefulWidget {
+  const Demo({super.key});
 
   @override
-  State<Register> createState() => _RegisterState();
+  State<Demo> createState() => _DemoState();
 }
 
 enum Gender { male, female, other }
 
-class _RegisterState extends State<Register> {
+class _DemoState extends State<Demo> {
   Gender? gender = Gender.male;
 
   bool isCheckedDeveloper = false;
