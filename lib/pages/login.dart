@@ -93,7 +93,7 @@ class LoginPage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const Register()));
+                                builder: (context) => Register()));
                       },
                       child: const Text(
                         'Forgot Password?',
@@ -110,7 +110,7 @@ class LoginPage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const Register()));
+                                builder: (context) => Register()));
                       },
                       child: RichText(
                         text: TextSpan(

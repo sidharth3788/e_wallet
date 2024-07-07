@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
 class Register extends StatelessWidget {
-  const Register({super.key});
+  Register({super.key});
+
+  final _nameController = TextEditingController();
+  final _ageController = TextEditingController();
+  final _mobileNumberController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+  final _confirmPasswordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -40,11 +47,12 @@ class Register extends StatelessWidget {
                     padding: const EdgeInsets.all(40),
                     child: Column(
                       children: [
-                        const Row(
+                        Row(
                           children: [
                             Expanded(
                               child: TextField(
-                                decoration: InputDecoration(
+                                controller: _nameController,
+                                decoration: const InputDecoration(
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.all(
                                       Radius.circular(15),
@@ -55,12 +63,13 @@ class Register extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 16.0,
                             ),
                             Expanded(
                               child: TextField(
-                                decoration: InputDecoration(
+                                controller: _ageController,
+                                decoration: const InputDecoration(
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.all(
                                       Radius.circular(15),
@@ -76,8 +85,9 @@ class Register extends StatelessWidget {
                         const SizedBox(
                           height: 16.0,
                         ),
-                        const TextField(
-                          decoration: InputDecoration(
+                        TextField(
+                          controller: _mobileNumberController,
+                          decoration: const InputDecoration(
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.all(
                                 Radius.circular(15),
@@ -91,8 +101,9 @@ class Register extends StatelessWidget {
                         const SizedBox(
                           height: 16.0,
                         ),
-                        const TextField(
-                          decoration: InputDecoration(
+                        TextField(
+                          controller: _emailController,
+                          decoration: const InputDecoration(
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.all(
                                 Radius.circular(15),
@@ -105,8 +116,9 @@ class Register extends StatelessWidget {
                         const SizedBox(
                           height: 16,
                         ),
-                        const TextField(
-                          decoration: InputDecoration(
+                        TextField(
+                          controller: _passwordController,
+                          decoration: const InputDecoration(
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.all(
                                 Radius.circular(15),
@@ -120,8 +132,9 @@ class Register extends StatelessWidget {
                         const SizedBox(
                           height: 16,
                         ),
-                        const TextField(
-                          decoration: InputDecoration(
+                        TextField(
+                          controller: _confirmPasswordController,
+                          decoration: const InputDecoration(
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.all(
                                 Radius.circular(15),
@@ -135,17 +148,19 @@ class Register extends StatelessWidget {
                         const SizedBox(
                           height: 16,
                         ),
-                        const Row(
+                        Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             ElevatedButton(
                               style: ButtonStyle(
-                                backgroundColor: WidgetStatePropertyAll(
-                                  Color(0xFF041444),
+                                backgroundColor: WidgetStateProperty.all(
+                                  const Color(0xFF041444),
                                 ),
                               ),
-                              onPressed: null,
-                              child: Text(
+                              onPressed: () {
+                                saveDataToStorage();
+                              },
+                              child: const Text(
                                 'Register',
                                 style: TextStyle(color: Colors.white),
                               ),
@@ -156,23 +171,26 @@ class Register extends StatelessWidget {
                           height: 200,
                         ),
                         TextButton(
-                          onPressed: null,
+                          onPressed: () {},
                           child: RichText(
                             text: TextSpan(
-                                text: 'Already have an Account? ',
-                                style: TextStyle(
-                                    color: Colors.grey[600],
-                                    fontWeight: FontWeight.bold),
-                                children: const <TextSpan>[
-                                  TextSpan(
-                                    text: 'Sign in',
-                                    style: TextStyle(
-                                        color: Color(0xFF041444),
-                                        fontWeight: FontWeight.bold),
-                                  )
-                                ]),
+                              text: 'Already have an Account? ',
+                              style: TextStyle(
+                                color: Colors.grey[600],
+                                fontWeight: FontWeight.bold,
+                              ),
+                              children: const <TextSpan>[
+                                TextSpan(
+                                  text: 'Sign in',
+                                  style: TextStyle(
+                                    color: Color(0xFF041444),
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ),
@@ -183,5 +201,14 @@ class Register extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future<void> saveDataToStorage() async {
+    print('Name: ${_nameController.text}');
+    print('Age: ${_ageController.text}');
+    print('Mobile Number: ${_mobileNumberController.text}');
+    print('Email Address: ${_emailController.text}');
+    print('Password: ${_passwordController.text}');
+    print('Confirm Password: ${_confirmPasswordController.text}');
   }
 }

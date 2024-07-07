@@ -1,7 +1,7 @@
 import 'package:e_wallet/pages/welcome.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+main() async {
   runApp(const MyApp());
 }
 
