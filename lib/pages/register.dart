@@ -1,4 +1,6 @@
+import 'package:e_wallet/pages/login.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class Register extends StatelessWidget {
   Register({super.key});
@@ -59,7 +61,9 @@ class Register extends StatelessWidget {
                                     ),
                                   ),
                                   labelText: 'Name',
-                                  labelStyle: TextStyle(color: Colors.grey),
+                                  labelStyle: TextStyle(
+                                      color: Colors.grey,
+                                      fontWeight: FontWeight.w400),
                                 ),
                               ),
                             ),
@@ -68,6 +72,10 @@ class Register extends StatelessWidget {
                             ),
                             Expanded(
                               child: TextField(
+                                inputFormatters: [
+                                  LengthLimitingTextInputFormatter(2)
+                                ],
+                                keyboardType: TextInputType.number,
                                 controller: _ageController,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(
@@ -76,7 +84,9 @@ class Register extends StatelessWidget {
                                     ),
                                   ),
                                   labelText: 'Age',
-                                  labelStyle: TextStyle(color: Colors.grey),
+                                  labelStyle: TextStyle(
+                                      color: Colors.grey,
+                                      fontWeight: FontWeight.w400),
                                 ),
                               ),
                             ),
@@ -86,6 +96,10 @@ class Register extends StatelessWidget {
                           height: 16.0,
                         ),
                         TextField(
+                          inputFormatters: [
+                            LengthLimitingTextInputFormatter(10)
+                          ],
+                          keyboardType: TextInputType.number,
                           controller: _mobileNumberController,
                           decoration: const InputDecoration(
                             border: OutlineInputBorder(
@@ -94,7 +108,9 @@ class Register extends StatelessWidget {
                               ),
                             ),
                             labelText: 'Mobile Number',
-                            labelStyle: TextStyle(color: Colors.grey),
+                            labelStyle: TextStyle(
+                                color: Colors.grey,
+                                fontWeight: FontWeight.w400),
                             prefixText: '+91',
                           ),
                         ),
@@ -110,7 +126,9 @@ class Register extends StatelessWidget {
                               ),
                             ),
                             labelText: 'Email Address',
-                            labelStyle: TextStyle(color: Colors.grey),
+                            labelStyle: TextStyle(
+                                color: Colors.grey,
+                                fontWeight: FontWeight.w400),
                           ),
                         ),
                         const SizedBox(
@@ -125,7 +143,9 @@ class Register extends StatelessWidget {
                               ),
                             ),
                             labelText: 'Password',
-                            labelStyle: TextStyle(color: Colors.grey),
+                            labelStyle: TextStyle(
+                                color: Colors.grey,
+                                fontWeight: FontWeight.w400),
                           ),
                           obscureText: true,
                         ),
@@ -141,7 +161,9 @@ class Register extends StatelessWidget {
                               ),
                             ),
                             labelText: 'Confirm Password',
-                            labelStyle: TextStyle(color: Colors.grey),
+                            labelStyle: TextStyle(
+                                color: Colors.grey,
+                                fontWeight: FontWeight.w400),
                           ),
                           obscureText: true,
                         ),
@@ -171,7 +193,12 @@ class Register extends StatelessWidget {
                           height: 200,
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const LoginPage()));
+                          },
                           child: RichText(
                             text: TextSpan(
                               text: 'Already have an Account? ',
