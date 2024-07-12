@@ -1,4 +1,5 @@
-import 'package:e_wallet/pages/welcome.dart';
+import 'package:e_wallet/pages/home.dart';
+import 'package:e_wallet/pages/login.dart';
 import 'package:flutter/material.dart';
 
 main() async {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
         useMaterial3: true,
       ),
-      home: const WelcomePage(),
+      home: LoginPage(),
     );
   }
 }

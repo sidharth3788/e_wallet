@@ -197,7 +197,7 @@ class Register extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const LoginPage()));
+                                    builder: (context) => LoginPage()));
                           },
                           child: RichText(
                             text: TextSpan(
@@ -239,3 +239,5 @@ class Register extends StatelessWidget {
     print('Confirm Password: ${_confirmPasswordController.text}');
   }
 }
+
+//ABCD

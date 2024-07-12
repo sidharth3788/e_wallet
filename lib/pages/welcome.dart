@@ -40,10 +40,8 @@ class WelcomePage extends StatelessWidget {
               width: 140,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const LoginPage()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LoginPage()));
                 },
                 style: ButtonStyle(
                   shape: WidgetStatePropertyAll(

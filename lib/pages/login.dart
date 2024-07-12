@@ -1,8 +1,12 @@
+import 'package:e_wallet/pages/home.dart';
 import 'package:e_wallet/pages/register.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+  LoginPage({super.key});
+
+  final _email = TextEditingController();
+  final _password = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -38,8 +42,9 @@ class LoginPage extends StatelessWidget {
                     const SizedBox(
                       height: 10,
                     ),
-                    const TextField(
-                      decoration: InputDecoration(
+                    TextField(
+                      controller: _email,
+                      decoration: const InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(
                             Radius.circular(15),
@@ -51,8 +56,9 @@ class LoginPage extends StatelessWidget {
                     const SizedBox(
                       height: 15,
                     ),
-                    const TextField(
-                      decoration: InputDecoration(
+                    TextField(
+                      controller: _password,
+                      decoration: const InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(
                             Radius.circular(15),
@@ -93,7 +99,7 @@ class LoginPage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => Register()));
+                                builder: (context) => const HomePage()));
                       },
                       child: const Text(
                         'Forgot Password?',
@@ -136,5 +142,10 @@ class LoginPage extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Future<void> saveData() async {
+    print('Email: $_email');
+    print('Password: $_password');
   }
 }
